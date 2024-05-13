@@ -1,0 +1,14 @@
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid-item {
+    margin: 10px; /* Adjust as needed */
+  }
+
+  .subcategory-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }

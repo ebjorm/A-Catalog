@@ -1,0 +1,50 @@
+{
+    "categories": {
+        "Tops": {
+            "1": {
+                "Image": "images/image3.png",
+                "Color": "White"
+            },
+            "2": {
+                "Image": "images/image4.png",
+                "Color": "Black"
+            },
+            "3": {
+                "Image": "images/image5.png",
+                "Color": "Brown"
+            },
+            "4": {
+                "Image": "images/image6.png",
+                "Color": "Blue"
+            },
+            "5": {
+                "Image": "images/image7.png",
+                "Color": "Black"
+            }
+        },
+        "Bottoms": {
+            "1": {
+                "Image": "images/image1.png",
+                "Color": "Blue"
+            },
+            "2": {
+                "Image": "images/image2.png",
+                "Color": "Black"
+            }
+        },
+        "Shoes": {
+            "1": {
+                "Image": "images/image8.png",
+                "Color": "Blue"
+            },
+            "2": {
+                "Image": "images/image9.png",
+                "Color": "Red"
+            },
+            "3": {
+                "Image": "images/image10.png",
+                "Color": "Black"
+            }
+        }
+    }
+}
