@@ -1,0 +1,21 @@
+.app {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.view-switcher {
+  float: right;
+}
+
+.view-switcher button {
+  margin-left: 10px;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  height: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
