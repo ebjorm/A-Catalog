@@ -1,0 +1,62 @@
+{
+    "categories": {
+        "Tops": {
+            "Crop-tops": {
+                "1": {
+                    "Image": "images/Image 3_11zon.png",
+                    "Color": "White"
+                },
+                "2": {
+                    "Image": "images/Image 4_11zon.png",
+                    "Color": "Black"
+                }
+            },
+            "T-shirts": {
+                "1": {
+                    "Image": "images/Image 5_11zon.png",
+                    "Color": "Brown"
+                }
+            },
+            "Long sleeves": {
+                "1": {
+                    "Image": "images/Image 6_11zon.png",
+                    "Color": "Blue"
+                },
+                "2": {
+                    "Image": "images/Image 7_11zon.png",
+                    "Color": "Black"
+                }
+            }
+        },
+        "Bottoms": {
+            "Jeans": {
+                "1": {
+                    "Image": "images/Image 1_11zon.png",
+                    "Color": "Blue"
+                },
+                "2": {
+                    "Image": "images/Image 2_11zon.png",
+                    "Color": "Black"
+                }
+            }
+        },
+        "Shoes": {
+            "Sneakers": {
+                "1": {
+                    "Image": "images/Image 8_11zon.png",
+                    "Color": "Blue"
+                },
+                "2": {
+                    "Image": "images/Image 9_11zon.png",
+                    "Color": "Red"
+                }
+            },
+            "Boots": {
+                "1": {
+                    "Image": "images/Image 10_11zon.png",
+                    "Color": "Black"
+                }
+            }
+        }
+    }
+}
