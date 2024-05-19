@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 import CategoryGrid from './CategoryGrid'; 
+import Outfit from './Outfit';
 import clothingItemsData from './items.json';
 
 function App() {
   // State to manage the current view (outfit or grid)
   const [isGridView, setIsGridView] = useState(false);
 
-  // Function to toggle between outfit and grid views
+  // Function to toggle between outfit and grid view
   const toggleView = () => {
     setIsGridView(!isGridView);
   };
@@ -30,8 +31,10 @@ function App() {
         </div>
       ) : (
         <div className="outfit-view">
-          <h2>Outfit View</h2>
-          <img src={require('./images/image1.png')} alt="Outfit" />
+          {/* Calls to Outfit.js to create a item picker for the category specified */}
+          <Outfit category="Tops" clothingItems={clothingItemsData.categories} imageSize={150} />
+          <Outfit category="Bottoms" clothingItems={clothingItemsData.categories} imageSize={300} />
+          <Outfit category="Shoes" clothingItems={clothingItemsData.categories} imageSize={150} />
         </div>
       )}
 

@@ -1,0 +1,29 @@
+.category-outfit {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .outfit-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .outfit-item img {
+    margin: 0 10px;
+  }
+  
+  .arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .arrow-button img {
+    width: 30px;
+    height: auto;
+  }
+  
+  .left-arrow {
+    transform: scaleX(-1);
+  }
