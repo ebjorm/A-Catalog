@@ -9,17 +9,19 @@ function App() {
   const [isGridView, setIsGridView] = useState(false);
 
   // Function to toggle between outfit and grid view
-  const toggleView = () => {
-    setIsGridView(!isGridView);
+  const toggleView = (targerView) => {
+    if ((targerView === 'grid' && !isGridView) || (targerView === 'outfit' && isGridView)) {
+      setIsGridView(!isGridView);
+    }
   };
 
   return (
     <div className="app">
       <h1>A Catalog.</h1>
       <div className="view-switcher">
-        <button onClick={toggleView}>Outfit</button>
+        <img src="/icons/Outfit.png" alt="Outfit" className="view-icon" onClick={() => toggleView('outfit')}></img>
         <span>/</span>
-        <button onClick={toggleView}>Grid</button>
+        <img src="/icons/Grid.png" alt="Grid" className="view-icon" onClick={() => toggleView('grid')}></img>
       </div>
       {/* Conditional rendering based on the current view */}
       {isGridView ? (

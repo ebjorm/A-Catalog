@@ -3,13 +3,25 @@
   padding: 20px;
 }
 
-.view-switcher {
-  float: right;
+.view-switcher .view-icon {
+  width: 30px;
+  height: auto;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.view-switcher button {
-  margin-left: 10px;
+.view-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  padding: 10px; 
+  padding-top: 40px;
 }
+
 
 .footer {
   background-color: #f0f0f0;
