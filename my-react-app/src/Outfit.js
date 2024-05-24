@@ -11,7 +11,7 @@ const Outfit = ({ category, clothingItems, imageSize }) => {
   }
 
   const items = Object.values(clothingItems[category]); //Puts items into an Array
-  const currentItem = items[currentIndex]; //Getts the current item to be displayed based on currentIndex
+  const currentItem = items[currentIndex]; //Gets the current item to be displayed based on currentIndex
 
   //handels showing next item
   const handleNext = () => {
@@ -28,11 +28,11 @@ const Outfit = ({ category, clothingItems, imageSize }) => {
       <h2>/n</h2>
       <div className="outfit-item">
         <button className="arrow-button" onClick={handlePrevious}>
-          <img src={require('./icons/Arrow.png')} alt="Previous" className="left-arrow" />
+          <img src="/icons/Arrow.png" alt="Previous" className="left-arrow" />
         </button>
-        <img src={require(`./${currentItem.Image}`)} alt={currentItem.Color} style={{ width: 'auto', height: imageSize }} />
+        <img src={`/${currentItem.Image}`} alt={currentItem.Color} style={{ width: 'auto', height: imageSize }} />
         <button className="arrow-button" onClick={handleNext}>
-          <img src={require('./icons/Arrow.png')} alt="Next" />
+          <img src="/icons/Arrow.png" alt="Next" />
         </button>
       </div>
     </div>

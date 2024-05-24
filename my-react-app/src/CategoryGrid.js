@@ -12,17 +12,17 @@ const CategoryGrid = ({ clothingItems, selectedCategory, imageSize }) => {
   const items = clothingItems[selectedCategory];
   
   // Get the number of items in the category
-  const itemCount = Object.keys(items).length;
+  //const itemCount = Object.keys(items).length;
 
   return (
     <div className="category-grid">
-      {/* Category title */}
+      {/* Category Heading */}
       <h2 className="subcategory-heading">{selectedCategory}</h2>
       <div className="image-grid">
         {/* Goes though all the items in category and displays their image */}
       {Object.values(items).map((item, index) => (
         <div key={index} className="grid-item">
-          <img src={require(`./${item.Image}`)} alt={item.Color} style={{ width: 'auto', height: imageSize }} />
+          <img src={`/${item.Image}`} alt={item.Color} style={{ width: 'auto', height: imageSize }} />
         </div>
       ))}
     </div>
