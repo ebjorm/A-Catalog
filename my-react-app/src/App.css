@@ -1,10 +1,10 @@
 .app {
-  background-color: #f0f0f0;
+  background-color: #FAF9F6;
   padding: 20px;
 }
 
 .view-switcher .view-icon {
-  width: 30px;
+  width: 40px;
   height: auto;
   margin: 0 5px;
   cursor: pointer;
@@ -17,14 +17,31 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #f0f0f0;
+  background-color: #FAF9F6;
   padding: 10px; 
   padding-top: 40px;
 }
 
+.filter-section {
+  margin: 20px 0;
+}
+
+.filter-section h2 {
+  margin-bottom: 10px;
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-section button {
+  margin-top: 10px;
+}
+
 
 .footer {
-  background-color: #f0f0f0;
+  background-color: #FAF9F6;
   height: 20px;
   position: fixed;
   bottom: 0;
