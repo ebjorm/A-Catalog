@@ -42,5 +42,6 @@ Files:
 ### Saateteksti
 The seven commits before this are all trying to fix an issue with getting the project published. This is because I had created the project in a wrong way and there was an "extra" layer of folders that I had to remove to get the site to publish correctly. 
 I decided not to implement the responsiveness aspect to the project due to time constraints. I am also not 100% sure if the projects interactivness is "complicated" enough for the requirements, but doing this project alone and not having the same time as others have had coming up with an idea for the project etc. made it harder to come up with an idea and have time to create something "complicated" enough. So, I hope there can be a little oversight with this. Other than that all requirements for the project should be fulfilled.
+One last comment I want to express is that the arrow to open the filters also closes the filter pop up and you have to be located at a quite specific spot on the arrow to get it to open.
 
 Toivottavasti myös ok että olen kirjoittanut kaikken textin Englaniksi, ajattelin että se ehkä on helpomi teille ymmärtää, minulle kirjoittaa ja auttaa jos haluan käyttää tätä projektia työhakemuksissa tulevaisuudessa myös. 
