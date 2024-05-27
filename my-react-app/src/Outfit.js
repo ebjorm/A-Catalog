@@ -31,12 +31,12 @@ const Outfit = ({ category, clothingItems, imageSize }) => {
 
   return (
     <div className="category-outfit">
-      <h2 style={{ visibility: 'hidden' }}>here to fix padding issue</h2> 
+      <h2 className="hidden-heading">here to fix padding issue</h2> 
       <div className="outfit-item">
         <button className="arrow-button left-arrow" onClick={handlePrevious}>
           <img src="/icons/ArrowL.png" alt="Previous" className="left-arrow" />
         </button>
-        <img src={`/${currentItem.Image}`} alt={currentItem.Color} style={{ width: 'auto', height: imageSize }} />
+        <img src={`/${currentItem.Image}`} alt={currentItem.alt} style={{ width: 'auto', height: imageSize }} />
         <button className="arrow-button" onClick={handleNext}>
           <img src="/icons/ArrowR.png" alt="Next" />
         </button>

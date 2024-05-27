@@ -20,7 +20,7 @@ const CategoryGrid = ({ clothingItems, selectedCategory, imageSize }) => {
       <div className="image-grid">
         {items.map((item, index) => (
           <div key={index} className="grid-item">
-            <img src={`/${item.Image}`} alt={item.Color} style={{ width: 'auto', height: imageSize }} />
+            <img src={`/${item.Image}`} alt={item.alt} style={{ width: 'auto', height: imageSize }} />
           </div>
         ))}
       </div>
