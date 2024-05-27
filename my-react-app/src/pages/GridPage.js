@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryGrid from "../components/CategoryGrid";
 
-const GridPage = ({ clothingItems, filteredClothingItems }) => (
+const GridPage = ({ filteredClothingItems }) => (
     <div>
     {/* Calls to CategoryGrid to create a grid for the category specified */}
     <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Tops" imageSize={150} />

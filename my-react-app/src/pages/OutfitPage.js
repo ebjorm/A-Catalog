@@ -1,7 +1,7 @@
 import React from "react";
 import Outfit from "../components/Outfit";
 
-const OutfitPage = ({ clothingItems, filteredClothingItems}) => (
+const OutfitPage = ({ filteredClothingItems }) => (
     <div className="outfit-view">
     {/* Calls to Outfit.js to create a item picker for the category specified */}
     <Outfit category="Tops" clothingItems={filteredClothingItems} imageSize={150} />

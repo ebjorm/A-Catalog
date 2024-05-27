@@ -6,7 +6,7 @@ import GridPage from './pages/GridPage';
 import clothingItemsData from './items.json';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Collapse } from 'react-collapse';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
 
