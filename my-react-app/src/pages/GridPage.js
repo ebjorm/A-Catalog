@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryGrid from "./CategoryGrid";
+import CategoryGrid from "../components/CategoryGrid";
 
 const GridPage = ({ clothingItems, filteredClothingItems }) => (
     <div>

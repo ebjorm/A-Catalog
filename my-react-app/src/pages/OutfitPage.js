@@ -1,5 +1,5 @@
 import React from "react";
-import Outfit from "./Outfit";
+import Outfit from "../components/Outfit";
 
 const OutfitPage = ({ clothingItems, filteredClothingItems}) => (
     <div className="outfit-view">

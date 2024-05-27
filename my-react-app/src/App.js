@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
-import OutfitPage from './OutfitPage';
-import GridPage from './GridPage';
+import OutfitPage from './pages/OutfitPage';
+import GridPage from './pages/GridPage';
 import clothingItemsData from './items.json';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Collapse } from 'react-collapse';
@@ -92,7 +92,7 @@ function App() {
         <Route path='/grid' element= {<GridPage clothingItems={clothingItemsData} filteredClothingItems={filteredClothingItems} />} /> 
       </Routes>
       <footer className="footer">
-        Have a nice day :D
+        Have a nice day ☺
       </footer>
     </div>
   );
