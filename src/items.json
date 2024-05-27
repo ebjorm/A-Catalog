@@ -1,0 +1,60 @@
+{
+    "categories": {
+        "Tops": {
+            "1": {
+                "Image": "images/image3.png",
+                "Color": "White",
+                "alt": "White t-shirt"
+            },
+            "2": {
+                "Image": "images/image4.png",
+                "Color": "Black",
+                "alt": "Black top"
+            },
+            "3": {
+                "Image": "images/image5.png",
+                "Color": "Brown",
+                "alt": "Brown t-shirt"
+            },
+            "4": {
+                "Image": "images/image6.png",
+                "Color": "Blue",
+                "alt": "Blue boat neck long sleeve"
+            },
+            "5": {
+                "Image": "images/image7.png",
+                "Color": "Black",
+                "alt": "Black long sleeve"
+            }
+        },
+        "Bottoms": {
+            "1": {
+                "Image": "images/image1.png",
+                "Color": "Blue",
+                "alt": "Blue jeans"
+            },
+            "2": {
+                "Image": "images/image2.png",
+                "Color": "Black",
+                "alt": "Black jeans"
+            }
+        },
+        "Shoes": {
+            "1": {
+                "Image": "images/image8.png",
+                "Color": "Blue",
+                "alt": "Blue Adidas Gazelle sneakers"
+            },
+            "2": {
+                "Image": "images/image9.png",
+                "Color": "Red",
+                "alt": "Red Adidas Gazelle sneakers"
+            },
+            "3": {
+                "Image": "images/image10.png",
+                "Color": "Black",
+                "alt": "Black platform Dr. Martens boots"
+            }
+        }
+    }
+}
