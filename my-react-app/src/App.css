@@ -22,8 +22,20 @@
   padding-top: 40px;
 }
 
+.filter-toggle {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  background-color: #FAF9F6;
+  padding: 5px;
+  cursor: pointer;
+}
+
 .filter-section {
-  margin: 20px 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
 }
 
 .filter-section h2 {

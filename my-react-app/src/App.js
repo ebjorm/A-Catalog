@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import CategoryGrid from './CategoryGrid'; 
+import CategoryGrid from './CategoryGrid';
 import Outfit from './Outfit';
 import clothingItemsData from './items.json';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import { Collapse } from 'react-collapse';
 
 function App() {
   // State to manage the current view (outfit or grid)
@@ -11,11 +13,14 @@ function App() {
   //State to manage selected colors for filtering
   const [selectedColors, setSelectedColors] = useState([]);
 
+  //State to manage the visibility of the filter section
+  const [filterOpen, setFilterOpen] = useState(false);
+
   // Function to toggle between outfit and grid view
   const toggleView = (targetView) => {
     if ((targetView === 'grid' && !isGridView) || (targetView === 'outfit' && isGridView)) {
       setIsGridView(!isGridView);
-      setSelectedColors([]);
+      setSelectedColors([]); //Resets the filter when switching views
     }
   };
 
@@ -47,32 +52,37 @@ function App() {
     <div className="app">
       <h1>A Catalog.</h1>
       <div className="view-switcher">
-        <img src="/icons/Outfit.png" alt="Outfit" className="view-icon" onClick={() => toggleView('outfit')}></img>
+        <img src="/icons/Outfit.png" alt="Outfit" className="view-icon" onClick={() => toggleView('outfit')}/>
         <span>/</span>
-        <img src="/icons/Grid.png" alt="Grid" className="view-icon" onClick={() => toggleView('grid')}></img>
+        <img src="/icons/Grid.png" alt="Grid" className="view-icon" onClick={() => toggleView('grid')}/>
       </div>
-      <div className="filter-section">
-        <h2>Filter by Color</h2>
-        {["White", "Black", "Brown", "Blue", "Red"].map(color => (
-          <label key={color}>
-            <input
-              type="checkbox"
-              value={color}
-              onChange={() => handleColorChange(color)}
-              checked={selectedColors.includes(color)}
-            />
-            {color}
-          </label>
-        ))}
-        <button onClick={resetFilter}>Reset Filter</button>
+      <div className="filter-toggle" onClick={() => setFilterOpen(!filterOpen)}>
+        {filterOpen ? <FaArrowLeft size={20} /> : <FaArrowRight size={20} />}
       </div>
+      <Collapse isOpened={filterOpen}>
+        <div className="filter-section">
+          <h2>Filter by Color</h2>
+          {["White", "Black", "Brown", "Blue", "Red"].map(color => (
+            <label key={color}>
+              <input
+                type="checkbox"
+                value={color}
+                onChange={() => handleColorChange(color)}
+                checked={selectedColors.includes(color)}
+              />
+              {color}
+            </label>
+          ))}
+          <button onClick={resetFilter}>Reset Filter</button>
+        </div>
+      </Collapse>
       {/* Conditional rendering based on the current view */}
       {isGridView ? (
         <div>
           {/* Calls to CategoryGrid to create a grid for the category specified */}
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory={"Tops"} imageSize={150} />
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory={"Bottoms"} imageSize={300} />
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory={"Shoes"} imageSize={140} />
+          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Tops" imageSize={150} />
+          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Bottoms" imageSize={300} />
+          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Shoes" imageSize={140} />
         </div>
       ) : (
         <div className="outfit-view">
