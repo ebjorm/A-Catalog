@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
-import CategoryGrid from './CategoryGrid';
-import Outfit from './Outfit';
+import OutfitPage from './OutfitPage';
+import GridPage from './GridPage';
 import clothingItemsData from './items.json';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Collapse } from 'react-collapse';
+import { Link, useNavigate } from 'react-router-dom';
 
 function App() {
+
+  //State to manage navigation
+  const navigate = useNavigate();
+
   // State to manage the current view (outfit or grid)
   const [isGridView, setIsGridView] = useState(false);
 
@@ -18,10 +24,13 @@ function App() {
 
   // Function to toggle between outfit and grid view
   const toggleView = (targetView) => {
-    if ((targetView === 'grid' && !isGridView) || (targetView === 'outfit' && isGridView)) {
-      setIsGridView(!isGridView);
-      setSelectedColors([]); //Resets the filter when switching views
+    if (targetView === 'grid') {
+      navigate('/grid');
+    } else {
+      navigate('/');
     }
+    setIsGridView(targetView === 'grid');
+    setSelectedColors([]); //Resets filters
   };
 
   //Function to handle filter changes
@@ -51,6 +60,7 @@ function App() {
   return (
     <div className="app">
       <h1>A Catalog.</h1>
+      <br></br>
       <div className="view-switcher">
         <img src="/icons/Outfit.png" alt="Outfit" className="view-icon" onClick={() => toggleView('outfit')}/>
         <span>/</span>
@@ -77,24 +87,12 @@ function App() {
         </div>
       </Collapse>
       {/* Conditional rendering based on the current view */}
-      {isGridView ? (
-        <div>
-          {/* Calls to CategoryGrid to create a grid for the category specified */}
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Tops" imageSize={150} />
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Bottoms" imageSize={300} />
-          <CategoryGrid clothingItems={filteredClothingItems} selectedCategory="Shoes" imageSize={140} />
-        </div>
-      ) : (
-        <div className="outfit-view">
-          {/* Calls to Outfit.js to create a item picker for the category specified */}
-          <Outfit category="Tops" clothingItems={filteredClothingItems} imageSize={150} />
-          <Outfit category="Bottoms" clothingItems={filteredClothingItems} imageSize={300} />
-          <Outfit category="Shoes" clothingItems={filteredClothingItems} imageSize={150} />
-        </div>
-      )}
-
+      <Routes>
+        <Route path='/' element= {<OutfitPage clothingItems={clothingItemsData} filteredClothingItems={filteredClothingItems} />} />
+        <Route path='/grid' element= {<GridPage clothingItems={clothingItemsData} filteredClothingItems={filteredClothingItems} />} /> 
+      </Routes>
       <footer className="footer">
-        This is a footer.
+        Have a nice day :D
       </footer>
     </div>
   );
